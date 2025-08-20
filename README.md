@@ -107,8 +107,7 @@ Clone the project to your local machine.
 <!-- TOC --><a name="backend-setup"></a>
 ### Backend Setup
 
-- Navigate to the backend folder   
-    - `cd backend`
+- Run below commands in root folder(project-manager)
 - Create a virtual environment  
     - `python -m venv venv`
 - Activate the virtual environment  
