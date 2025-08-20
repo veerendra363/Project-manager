@@ -31,3 +31,21 @@ class TaskCommentType(DjangoObjectType):
     class Meta:
         model = TaskComment
         fields = "__all__"
+
+
+# --- Paginated List Types ---
+class OrganizationListType(graphene.ObjectType):
+    total_count = graphene.Int()
+    results = graphene.List(OrganizationType)
+
+class ProjectListType(graphene.ObjectType):
+    total_count = graphene.Int()
+    results = graphene.List(ProjectType)
+
+class TaskListType(graphene.ObjectType):
+    total_count = graphene.Int()
+    results = graphene.List(TaskType)
+
+class TaskCommentListType(graphene.ObjectType):
+    total_count = graphene.Int()
+    results = graphene.List(TaskCommentType)

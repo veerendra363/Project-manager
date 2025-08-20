@@ -1,14 +1,14 @@
 import { gql } from "@apollo/client";
 
-export const GET_PROJECTS_BY_ORG = gql`
-  query GetProjectsByOrganization(
-    $organizationId: ID!
+export const GET_TASKS_BY_PROJ = gql`
+  query GetTasksByProject(
+    $projectId: ID!
     $page: Int = 1
     $pageSize: Int = 5
     $orderBy: String = "desc"
   ) {
-    projects(
-      organizationId: $organizationId
+    tasks(
+      projectId: $projectId
       page: $page
       pageSize: $pageSize
       orderBy: $orderBy
@@ -16,9 +16,9 @@ export const GET_PROJECTS_BY_ORG = gql`
       totalCount
       results {
         id
-        name
+        title
         status
-        dueDate
+        assigneeEmail
         description
       }
     }
