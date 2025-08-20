@@ -27,3 +27,16 @@ export const UPDATE_TASK = gql`
     }
   }
 `;
+
+export const ADD_TASK_COMMENT = gql`
+  mutation AddTaskComment($taskId: ID!, $content: String!, $authorEmail: String!) {
+    addTaskComment(taskId: $taskId, content: $content, authorEmail: $authorEmail) {
+      comment {
+        id
+        content
+        authorEmail
+        timestamp
+      }
+    }
+  }
+`;

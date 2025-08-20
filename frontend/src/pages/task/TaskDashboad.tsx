@@ -65,8 +65,8 @@ export default function TaskDashboard() {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">
-        Tasks for {project?.name || 'Project'}
+      <h2 className="text-3xl font-bold text-blue-900 mb-5 capitalize">
+        {project?.name || 'Project'} Tasks
       </h2>
 
       <DashboardCard

@@ -60,6 +60,7 @@ export default function OrganizationDashboard() {
 
   return (
     <div className="p-4">
+      <h2 className="text-3xl font-bold text-blue-900 mb-5">Organization Dashboard</h2>
       <DashboardCard
         dashboardType="org"
         data={data.organizations.results}

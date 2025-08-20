@@ -27,7 +27,7 @@ export default function TaskCard({ task, onCommentClick }: TaskCardProps) {
       <div className="flex justify-between items-start w-full">
         {/* Left side - Task info */}
         <div className="flex flex-col gap-2 flex-1">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between capitalize">
             <h3 className="text-lg font-bold text-blue-900">{task.title}</h3>
             <span
               className={`px-2 py-1 rounded text-xs font-semibold ${STATUS_COLORS[task.status]}`}

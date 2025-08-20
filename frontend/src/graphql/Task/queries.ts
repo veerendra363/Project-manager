@@ -25,8 +25,8 @@ export const GET_TASKS_BY_PROJECT = gql`
   }
 `;
 
-export const GET_TASK_WITH_COMMENTS = gql`
-  query GetTaskWithComments($id: ID!) {
+export const GET_TASK = gql`
+  query GetTask($id: ID!) {
     task(id: $id) {
       id
       title
@@ -34,16 +34,21 @@ export const GET_TASK_WITH_COMMENTS = gql`
       status
       assigneeEmail
       createdAt
-      totalComments
     }
-    taskComments(taskId: $id, page: 1, pageSize: 50) {
+  }
+`;
+
+export const GET_TASK_COMMENTS = gql`
+  query GetTaskComments($taskId: ID!, $page: Int!, $pageSize: Int!) {
+    taskComments(taskId: $taskId, page: $page, pageSize: $pageSize) {
       totalCount
       results {
         id
-        comment
-        assigneeEmail
+        content
+        authorEmail
         createdAt
       }
     }
   }
 `;
+

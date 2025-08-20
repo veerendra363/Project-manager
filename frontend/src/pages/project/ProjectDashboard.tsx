@@ -64,8 +64,8 @@ export default function ProjectDashboard() {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">
-        Projects for {org?.name || 'Organization'}
+      <h2 className="text-3xl font-bold text-blue-900 mb-5 capitalize">
+        {org?.name || 'Organization'} Projects
       </h2>
 
       <DashboardCard
