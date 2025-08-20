@@ -1,4 +1,12 @@
-<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+<p align="center">
+  <img src="./visuals/org_dashboard.png" alt="Organization Dashboard" width="200" height="150">
+  <img src="./visuals/org_form.png" alt="Organization Form" width="200" height="150">
+  <img src="./visuals/task_comment.png" alt="Task Comments" width="200" height="150">
+  <img src="./visuals/commnet_form.png" alt="Comment Form" width="200" height="150">
+</p>
+
+[Demo Video](./visuals/project-manager.mp4)
 
 - [Project Manager App](#project-manager-app)
    * [🚀 Features](#-features)
@@ -8,6 +16,8 @@
       + [Frontend Setup](#frontend-setup)
       + [Backend Setup](#backend-setup)
    * [📄 API Documentation](#-api-docs)
+   * [📸 Screenshots](#screenshots)
+
 
 <!-- TOC end -->
 
@@ -137,3 +147,17 @@ Clone the project to your local machine.
 
 - The API documentation was generated using CLI tools.
 - [Click here to open API Documentation](./APIDocumentation.md)
+
+<a name="screenshots"></a>
+## 📸 Screenshots
+<p align="center">
+  <img src="./visuals/org_dashboard.png" alt="Organization Dashboard" width="200" height="150">
+  <img src="./visuals/org_form.png" alt="Organization Form" width="200" height="150">
+  <img src="./visuals/proj_dashboard.png" alt="Project Dashboard" width="200" height="150">
+  <img src="./visuals/proj_form.png" alt="Project Form" width="200" height="150">
+  <br>
+  <img src="./visuals/task_dashboard.png" alt="Task Dashboard" width="200" height="150">
+  <img src="./visuals/task_form.png" alt="Task Form" width="200" height="150">
+  <img src="./visuals/task_comment.png" alt="Task Comments" width="200" height="150">
+  <img src="./visuals/commnet_form.png" alt="Comment Form" width="200" height="150">
+</p>
