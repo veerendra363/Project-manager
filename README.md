@@ -114,7 +114,7 @@ Clone the project to your local machine.
 - Activate the virtual environment  
    - `.\venv\Scripts\activate`
 - Install dependencies  
-    - `pip install django==4.2 djangorestframework graphene-django psycopg2-binary`
+    - `pip install django==4.2 djangorestframework graphene-django psycopg2-binary django-cors-headers`
 - Verify installation
     - `pip show django`
     - `pip show graphene-django`
