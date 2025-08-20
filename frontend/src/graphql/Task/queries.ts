@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-export const GET_TASKS_BY_PROJ = gql`
+export const GET_TASKS_BY_PROJECT = gql`
   query GetTasksByProject(
     $projectId: ID!
     $page: Int = 1
