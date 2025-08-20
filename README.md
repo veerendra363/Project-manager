@@ -7,6 +7,7 @@
    * [⚙️ Setup Guide (Windows)](#-setup-guide-windows)
       + [Frontend Setup](#frontend-setup)
       + [Backend Setup](#backend-setup)
+   * [📄 API Documentation](#-api-docs)
 
 <!-- TOC end -->
 
@@ -129,4 +130,10 @@ Clone the project to your local machine.
     - `python manage.py runserver`
     - The server will start locally and be available at:  
     - Backend API: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)  
-    - GraphQL Playground (GraphiQL): [http://127.0.0.1:8000/graphql/](http://127.0.0.1:8000/graphql/)  
+    - GraphQL Playground (GraphiQL): [http://127.0.0.1:8000/graphql/](http://127.0.0.1:8000/graphql/)   
+
+<!-- TOC --><a name="-api-docs"></a>
+## 📄 API Documentation
+
+- The API documentation was generated using CLI tools.
+- [Click here to open API Documentation](./APIDocumentation.md)
