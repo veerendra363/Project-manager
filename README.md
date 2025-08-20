@@ -1,7 +1,21 @@
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [Project Manager App](#project-manager-app)
+   * [🚀 Features](#-features)
+   * [🛠 Tech Stack](#-tech-stack)
+   * [📋 Prerequisites](#-prerequisites)
+   * [⚙️ Setup Guide (Windows)](#-setup-guide-windows)
+      + [Frontend Setup](#frontend-setup)
+      + [Backend Setup](#backend-setup)
+
+<!-- TOC end -->
+
+<a name="project-manager-app"></a>
 # Project Manager App
 
 This mini application demonstrates how organizations can manage **projects, tasks, and comments** in a structured, multi-tenant system with GraphQL APIs, PostgreSQL database, and a modern React-based UI.
 
+<!-- TOC --><a name="-features"></a>
 ## 🚀 Features
 
 - **Landing Page / Organization Dashboard**
@@ -40,6 +54,7 @@ This mini application demonstrates how organizations can manage **projects, task
 
 ---
 
+<!-- TOC --><a name="-tech-stack"></a>
 ## 🛠 Tech Stack
 
 - **Backend:** Django, Python, GraphQL (Graphene), PostgreSQL, GraphiQL (for API exploration)  
@@ -49,6 +64,7 @@ This mini application demonstrates how organizations can manage **projects, task
 
 ---
 
+<!-- TOC --><a name="-prerequisites"></a>
 ## 📋 Prerequisites
 
 Before running the project, ensure you have the following installed:
@@ -63,10 +79,12 @@ Before running the project, ensure you have the following installed:
 
 ---
 
+<!-- TOC --><a name="-setup-guide-windows"></a>
 ## ⚙️ Setup Guide (Windows)
 Clone the project to your local machine.  
     `git clone <your-repo-url>`
 
+<!-- TOC --><a name="frontend-setup"></a>
 ### Frontend Setup
 - Navigate to the frontend folder  
    - `cd frontend`
@@ -75,6 +93,7 @@ Clone the project to your local machine.
 - Start the development server  
     - `npm run dev`
 
+<!-- TOC --><a name="backend-setup"></a>
 ### Backend Setup
 
 - Navigate to the backend folder   
