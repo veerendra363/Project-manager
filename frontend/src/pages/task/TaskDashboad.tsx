@@ -58,6 +58,11 @@ export default function TaskDashboard() {
     setModalOpen(true);
   };
 
+  const handleForward = (task: any) => {
+    navigate(`/discussions/${task.id}`, { state: { task } });
+  };
+
+
   return (
     <div className="p-4">
       <h2 className="text-xl font-bold mb-4">
@@ -74,6 +79,7 @@ export default function TaskDashboard() {
         onAddNew={() => { setEditingTask(null); setModalOpen(true); }}
         onView={(task) => console.log("View:", task)}
         onEdit={handleEdit}
+        onForward={(task) => handleForward(task)}
       />
 
       <Modal
