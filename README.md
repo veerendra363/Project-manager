@@ -1,74 +1,113 @@
-# Project Manager - Backend Setup
+# Project Manager App
 
-This document explains how to set up and run the Project Manager Backend using Django + PostgreSQL.
+This mini application demonstrates how organizations can manage **projects, tasks, and comments** in a structured, multi-tenant system with GraphQL APIs, PostgreSQL database, and a modern React-based UI.
+
+## 🚀 Features
+
+- **Landing Page / Organization Dashboard**
+  - Lists all organizations in a paginated table
+  - Actions:
+    - ➕ Add new organization  
+    - ✏️ Edit organization  
+    - 📂 Go to the project dashboard of that organization  
+
+- **Project Dashboard**
+  - Displays projects for a selected organization (paginated list view)
+  - Actions:
+    - ➕ Add new project  
+    - ✏️ Edit project  
+    - 📂 Go to the task dashboard of that project  
+    - ⬅️ Back button to return to Organization Dashboard
+
+- **Task Dashboard**
+  - Shows tasks of a selected project (paginated list view)
+  - Actions:
+    - ➕ Add new task  
+    - ✏️ Edit task  
+    - 📂 Go to Task Comments section  
+    - ⬅️ Back button to return to Project Dashboard
+
+- **Task Comments**
+  - Add new comments to a task  
+  - View the latest 25 comments in chronological order
+
+- **General Features**
+  - Pagination support on all dashboards (organizations, projects, tasks)  
+  - Toast messages for success/error notifications  
+  - Loading indicators during API/network calls  
+  - GraphQL API with Apollo Client integration  
+  - Responsive UI with TailwindCSS  
 
 ---
 
-## Setup Guide
+## 🛠 Tech Stack
 
-```bash
-# Step 1: Environment Setup
+- **Backend:** Django, Python, GraphQL (Graphene), PostgreSQL, GraphiQL (for API exploration)  
+- **Frontend:** React, TypeScript, Apollo Client, TailwindCSS, Lucide-react (icons), React Router DOM  
+- **Database:** PostgreSQL  
+- **Tools:** VS Code, GitHub, pip, npm, pgAdmin  
 
-# 1. Clone the repository
-git clone <your-repo-url>
-cd project-manager
+---
 
-# 2. Create a virtual environment
-python -m venv venv
+## 📋 Prerequisites
 
-# 3. Activate the virtual environment
-# On Windows (PowerShell)
-.\venv\Scripts\activate
-# On macOS/Linux
-source venv/bin/activate
+Before running the project, ensure you have the following installed:
 
-# 4. Install dependencies
-pip install django==4.2 djangorestframework graphene-django psycopg2-binary
+- **React 18+**  
+- **Node.js (v18 or above)** – comes with **npm** by default  
+- **Python 3.9+** (for Django and dependencies)  
+- **PostgreSQL** (for the database)  
+- **Git** (for version control)  
+- **pgAdmin** (optional, for managing PostgreSQL)  
+- **IDE** (optional: any IDE/editor like VS Code or PyCharm that supports React and Django is fine)  
 
-# 5. Verify installation
-pip show django
-pip show graphene-django
+---
 
+## ⚙️ Setup Guide (Windows)
+Clone the project to your local machine.  
+    `git clone <your-repo-url>`
 
-# Step 2: PostgreSQL Setup
+### Frontend Setup
+- Navigate to the frontend folder  
+   - `cd frontend`
+- Install dependencies  
+   -  `npm install`
+- Start the development server  
+    - `npm run dev`
 
-# 1. Install PostgreSQL (with pgAdmin, default port 5432)
+### Backend Setup
 
-# 2. Add PostgreSQL bin folder to PATH
-# Example: C:\Program Files\PostgreSQL\15\bin
-
-# 3. Check installation
-psql --version
-
-# 4. Open PostgreSQL shell
-psql -U postgres
-
-# 5. Create database
-CREATE DATABASE projectmanager;
-
-
-# Step 3: Configure Database in Django
-# Update project_manager/backend/settings.py
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'projectmanager',
-        'USER': 'postgres',
-        'PASSWORD': 'BK@143',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-
-
-# Step 4: Apply Migrations
-python manage.py migrate
-
-
-# Step 5: Create Superuser
-python manage.py createsuperuser
-
-
-# Step 6: Run Development Server
-python manage.py runserver
+- Navigate to the backend folder   
+    - `cd backend`
+- Create a virtual environment  
+    - `python -m venv venv`
+- Activate the virtual environment  
+   - `.\venv\Scripts\activate`
+- Install dependencies  
+    - `pip install django==4.2 djangorestframework graphene-django psycopg2-binary`
+- Verify installation
+    - `pip show django`
+    - `pip show graphene-django`
+- Create database in prosgreSQL db  
+- Configure Database in Django  
+    - Update project_manager/backend/settings.py
+    - ```bash 
+        DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'your_database_name',
+            'USER': 'your_database_user',
+            'PASSWORD': 'your_database_password',
+            'HOST': 'localhost',   # or your DB server/hostname
+            'PORT': '5432',        # default PostgreSQL port
+            }
+        }
+- Apply Migrations  
+    - `python manage.py migrate`
+- Seed Demo Data(optional)  
+    - `python manage.py seed`
+- Run Development Server  
+    - `python manage.py runserver`
+    - The server will start locally and be available at:  
+    - Backend API: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)  
+    - GraphQL Playground (GraphiQL): [http://127.0.0.1:8000/graphql/](http://127.0.0.1:8000/graphql/)  
