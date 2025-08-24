@@ -1,5 +1,3 @@
-// src/components/Error.tsx
-import { useState } from "react";
 import { AlertCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -8,10 +6,7 @@ interface ErrorProps {
 }
 
 export default function Error({ message }: ErrorProps) {
-  const [visible, setVisible] = useState(true);
   const navigate = useNavigate();
-
-  if (!visible) return null;
 
   return (
     <div className="relative max-w-md mx-auto mt-10 p-6 bg-red-50 border border-red-300 rounded-lg shadow-md text-red-700">
