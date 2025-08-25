@@ -113,10 +113,9 @@ Clone the project to your local machine.
 - Activate the virtual environment  
    - `.\venv\Scripts\activate`
 - Install dependencies  
-    - `pip install django==4.2 djangorestframework graphene-django psycopg2-binary django-cors-headers`
+    - `pip install -r requirements.txt`
 - Verify installation
-    - `pip show django`
-    - `pip show graphene-django`
+    - `pip freeze`
 - Create database in prosgreSQL db  
 - Configure Database in Django  
     - Update project_manager/backend/settings.py
@@ -130,7 +129,7 @@ Clone the project to your local machine.
             'HOST': 'localhost',   # or your DB server/hostname
             'PORT': '5432',        # default PostgreSQL port
             }
-        }
+    - Or if you want to connect our remote db then create .env file and  assign your db connection string to DATABASE_URL
 - Apply Migrations  
     - `python manage.py migrate`
 - Seed Demo Data(optional)  
