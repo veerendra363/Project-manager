@@ -33,7 +33,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'project-manager-amber-three.vercel.app'
+    'project-manager-amber-three.vercel.app',
+    'project-manager-ere0.onrender.com'
 ]
 
 
