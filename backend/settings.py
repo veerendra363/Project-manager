@@ -30,7 +30,11 @@ SECRET_KEY = 'django-insecure-%d6zd!^8(y(0b5#opp@+h$0sr28l=f=-(oxlwni(&o&6ynm@1x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'project-manager-amber-three.vercel.app'
+]
 
 
 # Application definition
@@ -102,10 +106,6 @@ else:
             'PORT': '5432',
         }
     }
-
-
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
